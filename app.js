@@ -1,3 +1,10 @@
+window.onerror = function (message, source, line, column, error) {
+    alert(
+        "Lỗi:\n" +
+        message +
+        "\nDòng: " + line
+    );
+};
 alert("app.js đã chạy");// ==========================================
 // VTP Check V4
 // app.js
