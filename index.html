@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,initial-scale=1">
+
+<title>VTP Check V4</title>
+
+<link rel="manifest" href="manifest.json">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📦 VTP Check V4</h1>
+
+<p class="subtitle">
+Đọc mã vận đơn từ video Viettel Post
+</p>
+
+<section class="card">
+
+<input
+type="file"
+id="videoInput"
+accept="video/*">
+
+<video
+id="video"
+controls
+playsinline>
+</video>
+
+<button id="scanBtn">
+Bắt đầu quét
+</button>
+
+<div class="progress">
+
+<div id="progressBar"></div>
+
+</div>
+
+</section>
+
+<section class="card">
+
+<h2>Danh sách mã</h2>
+
+<textarea
+id="result"
+readonly></textarea>
+
+</section>
+
+<section class="buttons">
+
+<button id="qrBtn">
+
+Tạo QR
+
+</button>
+
+<button id="zipBtn">
+
+Xuất ZIP
+
+</button>
+
+</section>
+
+</div>
+
+<script src="video.js"></script>
+
+<script src="ocr.js"></script>
+
+<script src="qr.js"></script>
+
+<script src="zip.js"></script>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
