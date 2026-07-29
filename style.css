@@ -1,7 +1,7 @@
-/* ===========================
+/* ==================================================
    VTP Check V4
    style.css
-=========================== */
+   ================================================== */
 
 *{
     margin:0;
@@ -9,20 +9,27 @@
     box-sizing:border-box;
 }
 
+html{
+    font-size:16px;
+}
+
 body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-    background:#f5f5f5;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:#f2f4f7;
     color:#222;
+    line-height:1.5;
 }
 
 .container{
-    max-width:700px;
+    width:100%;
+    max-width:720px;
     margin:auto;
-    padding:20px;
+    padding:18px;
 }
 
 h1{
     text-align:center;
+    font-size:32px;
     margin-bottom:8px;
 }
 
@@ -30,74 +37,163 @@ h1{
     text-align:center;
     color:#666;
     margin-bottom:20px;
+    font-size:17px;
 }
+
+/* =========================
+   Card
+========================= */
 
 .card{
     background:#fff;
-    border-radius:14px;
-    padding:16px;
-    margin-bottom:18px;
-    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    border-radius:16px;
+    padding:18px;
+    margin-bottom:20px;
+    box-shadow:0 4px 16px rgba(0,0,0,.08);
 }
+
+/* =========================
+   Input
+========================= */
 
 input[type=file]{
     width:100%;
     margin-bottom:15px;
 }
 
+/* =========================
+   Video
+========================= */
+
 video{
     width:100%;
-    height:auto;
-    max-height:70vh;
     display:block;
+
+    aspect-ratio:9/19.5;
+
     background:#000;
-    border-radius:10px;
+
+    border-radius:12px;
+
     object-fit:contain;
+
+    object-position:center;
+
+    margin-bottom:16px;
 }
+
+/* =========================
+   Buttons
+========================= */
 
 button{
     width:100%;
-    padding:14px;
+    height:48px;
+
     border:none;
-    border-radius:10px;
+
+    border-radius:12px;
+
     background:#d71920;
-    color:white;
-    font-size:17px;
-    margin-top:12px;
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.2s;
 }
 
 button:active{
-    opacity:.8;
+    transform:scale(.98);
 }
+
+/* =========================
+   Progress
+========================= */
 
 .progress{
     width:100%;
     height:10px;
+
     background:#ddd;
+
     border-radius:20px;
-    margin-top:15px;
+
     overflow:hidden;
+
+    margin-top:15px;
 }
 
 #progressBar{
     width:0%;
+
     height:100%;
-    background:#28a745;
-    transition:.3s;
+
+    background:#2ecc71;
+
+    transition:width .25s;
 }
+
+/* =========================
+   Result
+========================= */
 
 textarea{
     width:100%;
-    height:220px;
-    padding:10px;
+
+    height:240px;
+
     resize:none;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    padding:12px;
+
     font-size:15px;
-    border:1px solid #ccc;
-    border-radius:10px;
+
+    font-family:monospace;
+
+    background:#fafafa;
 }
+
+/* =========================
+   Bottom buttons
+========================= */
 
 .buttons{
     display:grid;
+
     grid-template-columns:1fr 1fr;
-    gap:12px;
+
+    gap:14px;
+}
+
+.buttons button{
+    margin-top:0;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width:600px){
+
+    h1{
+        font-size:28px;
+    }
+
+    .subtitle{
+        font-size:16px;
+    }
+
+    textarea{
+        height:200px;
+    }
+
 }
